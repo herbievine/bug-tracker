@@ -4,7 +4,7 @@
         <button @click="toggle" class="">
             Switch to {{ $colorMode.value == "light" ? "dark" : "light" }}
         </button>
-      <pre>{{ $colorMode.value }}</pre>
+      <pre>Currrent mode: {{ $colorMode.value }}</pre>
     </div>
 </template>
 
