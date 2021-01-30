@@ -1,0 +1,3 @@
+-   [ ] Setup CSS
+-   [ ] Create Layout
+-   [ ] Create Authentication System
