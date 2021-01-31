@@ -8,6 +8,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
+    transition: background-color 0.3s;
 }
 
 body {
@@ -20,4 +21,17 @@ body {
 *::after {
     box-sizing: border-box;
     margin: 0;
+}
+
+P,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+pre {
+    @apply dark:text-gray-200
 }

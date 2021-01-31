@@ -1,4 +1,8 @@
 export default {
+    server: {
+        host: '0.0.0.0',
+        port: 8000
+    },
     head: {
         title: 'bug-tracker',
         meta: [
@@ -29,10 +33,13 @@ export default {
             }
         }]        
     ],
+    css: [
+        '~/assets/css/main.css'
+    ],
     colorMode: {
         classSuffix: ""
     },
-    modules: ['@nuxtjs/axios', '@nuxtjs/pwa'],
+    modules: ['@nuxtjs/axios', '@nuxtjs/pwa', '@nuxtjs/auth'],
     axios: {},
     pwa: {
         manifest: {

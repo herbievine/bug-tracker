@@ -1,10 +1,10 @@
 <template>
     <NuxtLink
-        class="flex flex-row justify-start items-center px-4 py-2 text-sm font-semibold bg-transparent dark:text-gray-300 md:mt-0 rounded-lg dark:bg-transparent focus:outline-none focus:shadow-outline"
+        class="flex flex-row justify-start items-center px-4 py-2 text-sm font-semibold bg-transparent text-gray-800 dark:text-gray-200 md:mt-0 rounded-lg dark:bg-transparent focus:outline-none focus:shadow-outline"
         :class="
             highlight 
-                ? `dark:hover:${highlight} dark:hover:text-gray-300 hover:text-gray-600 hover:${highlight}`
-                : 'dark:hover:bg-gray-600 dark:hover:text-gray-300 hover:text-gray-600 hover:bg-gray-200'
+                ? `hover:${highlight} dark:hover:${highlight}`
+                : 'hover:bg-gray-200 dark:hover:bg-gray-600'
         "
         :to="path"
     >
