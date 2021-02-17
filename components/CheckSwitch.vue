@@ -52,18 +52,13 @@ export default Vue.extend({
 .switch {
   --switch-container-width: 40px;
   --switch-size: calc(var(--switch-container-width) / 2);
-  --light-gray: #e2e8f0;
-  --gray: #cbd5e0;
-  --dark-gray: #a0aec0;
-  --teal: #4fd1c5;
-  --dark-teal: #319795;
   display: flex;
   align-items: center;
   position: relative;
   height: var(--switch-size);
   flex-basis: var(--switch-container-width);
   border-radius: var(--switch-size);
-  background-color: var(--light-gray);
+  @apply bg-gray-200;
   flex-shrink: 0;
   transition: background-color 0.25s ease-in-out;
 }
@@ -76,35 +71,34 @@ export default Vue.extend({
   width: calc(var(--switch-size) - 4px);
   border-radius: 9999px;
   background-color: white;
-  border: 2px solid var(--light-gray);
+  @apply border-2 border-gray-200;
   transition: transform 0.2s ease-in-out;
 }
 
 .input:checked + .switch {
-  background-color: var(--teal);
+  @apply bg-blue-400
 }
 
 .input:checked + .switch::before {
-  border-color: var(--teal);
+  @apply border-blue-400;
   transform: translateX(
     calc(var(--switch-container-width) - var(--switch-size))
   );
 }
 
 .input:focus + .switch::before {
-  border-color: var(--gray);
+  @apply border-gray-200
 }
 
 .input:focus:checked + .switch::before {
-  border-color: var(--dark-teal);
+  @apply border-blue-500
 }
 
 .input:disabled + .switch {
-  background-color: var(--gray);
+  @apply bg-gray-200
 }
 
 .input:disabled + .switch::before {
-  background-color: var(--dark-gray);
-  border-color: var(--dark-gray);
+  @apply bg-gray-400 border-gray-400
 }
 </style>

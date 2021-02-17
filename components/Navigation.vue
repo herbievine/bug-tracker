@@ -17,7 +17,11 @@
                     @click="menuOpen = !menuOpen"
                 >
                     <svg
-                        :fill="$colorMode.value == 'light' ? 'bg-gray-800' : '#e5e7eb'"
+                        :fill="
+                            $colorMode.value == 'light'
+                                ? 'bg-gray-800'
+                                : '#e5e7eb'
+                        "
                         viewBox="0 0 20 20"
                         class="w-6 h-6"
                     >
@@ -36,14 +40,19 @@
                 :class="menuOpen ? '' : 'hidden'"
                 class="flex flex-col flex-grow pb-4 mx-4 md:mx-0 md:pb-0 md:flex md:justify-end md:flex-row"
             >
-                <Button class="mr-5" title="About" path="/about" />
+                <Button class="mr-5" title="Login" path="/login" />
+                <Button class="mr-5" title="Register" path="/register" highlight="bg-green-600" />
                 <div class="relative">
                     <button
                         @click="dropdownOpen = !dropdownOpen"
                         class="flex flex-column items-center justify-center md:w-full px-4 py-2 mt-2 mx-4 md:mx-0 text-sm font-semibold text-left bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 md:w-auto md:inline md:mt-0 hover:bg-gray-200 focus:outline-none focus:shadow-outline"
                     >
                         <svg
-                            :fill="$colorMode.value == 'light' ? 'bg-gray-800' : '#e5e7eb'"
+                            :fill="
+                                $colorMode.value == 'light'
+                                    ? 'bg-gray-800'
+                                    : '#e5e7eb'
+                            "
                             viewBox="0 0 20 20"
                             :class="dropdownOpen ? 'rotate-180' : 'rotate-0'"
                             class="inline w-4 h-4 mt-1 transition-transform duration-200 transform md:-mt-1"
@@ -61,7 +70,6 @@
                             class="p-2 rounded-md shadow dark:bg-gray-800"
                             :class="dropdownOpen ? '' : 'hidden'"
                         >
-                            <Button title="User" path="/user" icon="user" />
                             <Button title="Settings" path="/settings" icon="cog" />
                             <Button title="Logout" path="/settings" icon="sign-out-alt" highlight="bg-red-400" />
                         </div>
@@ -74,7 +82,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Button from '~/components/Button.vue' 
+import Button from '~/components/Button.vue'
 
 export default Vue.extend({
     name: 'Navigation',

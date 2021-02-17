@@ -1,7 +1,7 @@
 <template>
     <div class="w-5/6 px-60 mx-auto mt-6">
         <h1 class="text-xl pb-1 mb-4 w-full border-b border-gray-500 dark:border-gray-300">Settings</h1>
-        <div class="w-full p-5 md:px-10 md:py-5 rounded-xl border border-gray-500 dark:border-gray-300 mb-4">
+        <div class="w-full p-5 md:px-10 md:py-5 rounded-xl border border-gray-600 dark:border-gray-300 mb-4">
             <h3 class="text-lg pb-1 mb-4 underline">Your Account</h3>
             <div class="flex flex-col items-center">
                 <div class="w-full flex items-center mb-3">
@@ -14,7 +14,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-full p-5 md:px-10 md:py-5 rounded-xl border border-gray-500 dark:border-gray-300">
+        <div class="w-full p-5 md:px-10 md:py-5 rounded-xl border border-gray-600 dark:border-gray-300">
             <h3 class="text-lg pb-1 mb-4 underline">Appearance</h3>
             <CheckSwitch
                 v-if="darkMode != null"
